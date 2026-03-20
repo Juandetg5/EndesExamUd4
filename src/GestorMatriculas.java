@@ -1,13 +1,26 @@
 import java.util.ArrayList;
 
 public class GestorMatriculas {
-
+    /**
+     * @author Juan De Dios Tovar Garcia
+     * Lista para matricular alumnos
+     */
     private ArrayList<Matricula> matriculas;
 
+    /**
+     * Constructor del gestor
+     */
     public GestorMatriculas() {
         setMatriculas(new ArrayList<>());
     }
 
+    /**
+     * Metodo para crear la matricula
+     * @param a objeto alumno
+     * @param as objeto asignatura
+     * @param p objeto profesor
+     * @param nota nota del alumno
+     */
     public void crearMatricula(Alumno a, Asignatura as, Profesor p, double nota) {
 
         if (nota < 0) {
@@ -21,6 +34,9 @@ public class GestorMatriculas {
         a.matricular(m);
     }
 
+    /**
+     * Metodo para mostrar todas las matriculas de la lista
+     */
     public void mostrarTodas() {
         for (Matricula m : getMatriculas()) {
             System.out.println(
@@ -32,6 +48,9 @@ public class GestorMatriculas {
         }
     }
 
+    /**
+     * Metodo para mostrar todos los alumnos que han aprobado
+     */
     public void mostrarAprobados() {
         for (Matricula m : getMatriculas()) {
             if (m.getNota() >= 5) {
@@ -40,6 +59,10 @@ public class GestorMatriculas {
         }
     }
 
+    /**
+     * Metodo para subir notas a los alumnos
+     * @param puntos los puntos que se van a subir a la nota
+     */
     public void subirNotaTodos(double puntos) {
         for (Matricula m : getMatriculas()) {
             m.setNota(m.getNota() + puntos);
@@ -50,6 +73,10 @@ public class GestorMatriculas {
         }
     }
 
+    /**
+     * Metodo para calcular la media global de todos los alumnos
+     * @return devuelve las matriculas completas
+     */
     public double mediaGlobal() {
         double suma = 0;
 
