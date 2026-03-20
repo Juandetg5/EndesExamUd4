@@ -25,7 +25,11 @@ public class Curso implements Mostrarr {
     public void agregarProfesor(Profesor p) {
         getProfesores().add(p);
     }
-@Override
+
+    /**
+     * Metodo para mostrar
+     */
+    @Override
     public void mostrar() {
         System.out.println("CURSO: " + getNombre());
 
