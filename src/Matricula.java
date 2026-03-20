@@ -1,4 +1,4 @@
-public class Matricula {
+public class Matricula implements Mostrarr {
 
     private Alumno alumno;
     private Asignatura asignatura;
@@ -11,7 +11,7 @@ public class Matricula {
         this.setProfesor(profesor);
         this.setNota(nota);
     }
-
+@Override
     public void mostrar() {
         System.out.println(getAlumno().getNombre() + " - " +
                 getAsignatura().getNombre() + " - " +

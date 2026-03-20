@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Alumno extends Personas {
+public class Alumno extends Personas implements Mostrarr {
 
     private int edad;
     private ArrayList<Matricula> matriculas;
@@ -15,7 +15,8 @@ public class Alumno extends Personas {
         getMatriculas().add(m);
     }
 
-    public void mostrarDatos() {
+    @Override
+    public void mostrar() {
         System.out.println("Alumno: " + getNombre());
 
         for (Matricula m : getMatriculas()) {

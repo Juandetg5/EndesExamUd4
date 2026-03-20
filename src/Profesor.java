@@ -1,4 +1,4 @@
-public class Profesor extends Personas {
+public class Profesor extends Personas implements Mostrarr {
 
 
     private String especialidad;
@@ -8,6 +8,7 @@ public class Profesor extends Personas {
         this.setEspecialidad(especialidad);
     }
 
+    @Override
     public void mostrar() {
         System.out.println("Profesor: " + getNombre() + " - " + getEspecialidad());
     }
