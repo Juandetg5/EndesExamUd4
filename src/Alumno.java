@@ -1,8 +1,7 @@
 import java.util.ArrayList;
 
-public class Alumno {
+public class Alumno extends Personas {
 
-    private String nombre;
     private int edad;
     private ArrayList<Matricula> matriculas;
 

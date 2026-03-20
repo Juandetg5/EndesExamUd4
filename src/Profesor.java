@@ -1,15 +1,15 @@
-public class Profesor {
+public class Profesor extends Personas {
 
-    private String nombre;
-    public String especialidad;
+
+    private String especialidad;
 
     public Profesor(String nombre, String especialidad) {
         this.setNombre(nombre);
-        this.especialidad = especialidad;
+        this.setEspecialidad(especialidad);
     }
 
     public void mostrar() {
-        System.out.println("Profesor: " + getNombre() + " - " + especialidad);
+        System.out.println("Profesor: " + getNombre() + " - " + getEspecialidad());
     }
 
     public String getNombre() {
@@ -18,5 +18,13 @@ public class Profesor {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getEspecialidad() {
+        return especialidad;
+    }
+
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
     }
 }
